@@ -39,10 +39,10 @@ net = net.to(gpu)
 optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
 dataset = RGBDataSet()
 #dataset = OpticalFlowDataSet()
-dataLoader = DataLoader(dataset,batch_size=64,shuffle=True) 
+dataLoader = DataLoader(dataset,batch_size=128,shuffle=True) 
 iteration = 0
-zero = torch.zeros(64).type('torch.FloatTensor').to(gpu)
-one = torch.ones(64).type('torch.FloatTensor').to(gpu)
+zero = torch.zeros(128).type('torch.FloatTensor').to(gpu)
+one = torch.ones(128).type('torch.FloatTensor').to(gpu)
 
 
 print("Start training")
